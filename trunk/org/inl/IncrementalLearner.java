@@ -63,13 +63,16 @@ public class IncrementalLearner {
 
             for (int i = 0; i < BaseSystem.MAX_ITERACOES; i++) {
 
-                //na primeira iteracao, utiliza-se o grupo completo
+                //na primeira iteracao, utiliza-se o grupo completo/particao inicial
                 // a partir da segunda deve ser resampleado
                 if (i != 0) {
+
+                    System.out.println(" >>  partição inicial TR0 <<");
                     instanciasIteracao = sampler.novaColeta(inst);
 
 
                 } else {
+                    System.out.println(" >> partiçào TR" + i + " <<");
                     instanciasIteracao = inst;
                 }
 
@@ -86,12 +89,25 @@ public class IncrementalLearner {
                 
                 cModel.buildClassifier(instanciasIteracao);
 
+                //computar erro no modelo
 
 
+                //se erro>0,5 ou erroAtual>erroAnterior, parar treinamento
+
+
+                //atualizar pesos
+
+                //normalizar pesos
 
             }
-            //incializar pesos dos dados
 
+            if(!primeiro){
+
+                //computar erro E2
+                //se E2 for significantemente menor que E1
+                //adicionar Comite, caso contrario, comite será descartado
+                //atualizar Peso do comite
+            }
 
         }//fim for Instances inst
 
