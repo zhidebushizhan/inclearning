@@ -19,8 +19,16 @@ public class BaseSystem {
 
     private ArrayList<Instances> grupoDados;
     private IncrementalLearner incl;
-    private static int QUANTIDADE_INSTANCIAS = 3;
-    private static String DIR = "/home/daniel/Documentos/mestrado/mineracao/projeto";
+    protected static int QUANTIDADE_INSTANCIAS = 3;
+    protected static String DIR = "/home/daniel/Documentos/mestrado/mineracao/projeto";
+    protected static int MAX_ITERACOES = 10;
+
+    //dados para a rede neural, caso a escolha seja MLP com BackPropagation
+    protected static double MOMENTUM = 0.1;
+    protected static double TAXA_APRENDIZADO = 0.01;
+    protected static int QTDE_CAMADAS_ESCONDIDAS = 1;
+    protected static int QTDE_NEURONIOS_ESCONDIDOS = 3;
+
 
 
     public static void main(String[] args) {
@@ -70,7 +78,7 @@ public class BaseSystem {
 
     private void iniciarIncLearner(){
 
-       incl  = new IncrementalLearner(grupoDados);
+       incl  = new IncrementalLearner(grupoDados, MAX_ITERACOES);
 
     }
 
