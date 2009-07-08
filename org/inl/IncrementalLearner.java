@@ -99,6 +99,8 @@ public class IncrementalLearner {
 
                 //normalizar pesos
 
+                //teste
+
             }
 
             if(!primeiro){
