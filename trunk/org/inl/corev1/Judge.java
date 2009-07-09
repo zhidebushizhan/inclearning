@@ -2,7 +2,7 @@
  * Esta classe implementa o algoritmo com a estratégia de decisão.
  */
 
-package org.inl;
+package org.inl.corev1;
 
 /**
  *

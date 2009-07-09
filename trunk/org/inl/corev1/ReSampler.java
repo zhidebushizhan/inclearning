@@ -2,7 +2,7 @@
  *Implementa a estratégia para realizar a reamostragem
  */
 
-package org.inl;
+package org.inl.corev1;
 
 import weka.core.Instances;
 

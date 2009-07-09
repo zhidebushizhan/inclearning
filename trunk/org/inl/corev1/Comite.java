@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package org.inl;
+package org.inl.corev1;
 
 
 import java.util.ArrayList;
