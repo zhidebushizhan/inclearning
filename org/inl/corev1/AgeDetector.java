@@ -2,7 +2,7 @@
  *Detecta redes obsoletas, que serão retreinadas com novos dados
  */
 
-package org.inl;
+package org.inl.corev1;
 
 /**
  *

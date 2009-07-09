@@ -4,6 +4,7 @@
  */
 package org.inl;
 
+import org.inl.corev1.IncrementalLearner;
 import weka.core.Instances;
 import java.io.BufferedReader;
 import java.io.FileReader;

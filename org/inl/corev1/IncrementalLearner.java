@@ -1,8 +1,9 @@
 /*
  * Implementa o INL;
  */
-package org.inl;
+package org.inl.corev1;
 
+import org.inl.*;
 import java.util.ArrayList;
 import weka.classifiers.Classifier;
 import weka.classifiers.functions.MultilayerPerceptron;
@@ -34,6 +35,9 @@ public class IncrementalLearner {
         this.grupoDados = grupoDados;
 
     }
+
+
+
 
     public void iniciarTreinamento() throws Exception{
 
@@ -91,6 +95,7 @@ public class IncrementalLearner {
 
                 //computar erro no modelo
 
+                
 
                 //se erro>0,5 ou erroAtual>erroAnterior, parar treinamento
 
