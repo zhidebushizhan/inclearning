@@ -5,6 +5,7 @@
 package org.inl.corev1;
 
 import java.util.ArrayList;
+import java.util.Random;
 import org.inl.interfaces.IncrementalLearnerInterface;
 import org.inl.interfaces.ReSamplerInterface;
 import weka.classifiers.Classifier;
@@ -22,7 +23,7 @@ public class IncrementalLearnerImpl implements IncrementalLearnerInterface {
     private ReSamplerInterface rs = new ReSamplerImpl();
     static boolean DEBUG = true;
     private ArrayList<Comite> comites = new ArrayList<Comite>();
-    private ArrayList<Instances> periodos = null;
+    private ArrayList<Instances> periodos = new ArrayList<Instances>();
 
     private void inicializarPesos(Instances dados) {
 
@@ -62,30 +63,12 @@ public class IncrementalLearnerImpl implements IncrementalLearnerInterface {
 
         this.inicializarPesos(periodo);
 
-        //treinar rede inicial
-
-        //coleta = rs.novaColeta(periodo);
-        // classificador = this.treinarClassificador(coleta, "mlp");
-
-
-        //if (DEBUG) {
-
-        //  System.out.println(" --Classificador Inicial --");
-        // Evaluation eTest = new Evaluation(coleta);
-
-        // eTest.evaluateModel(classificador, coleta);
-
-        //  System.out.println(eTest.toSummaryString());
-        //}
-
-        //comite.addClassificador(classificador);
-
-
         int n = 0;
 
         while (!criterioTreinamento) {
 
-            coleta = rs.novaColeta(periodo);
+            //coleta = rs.novaColeta(periodo);
+             coleta = periodo.resampleWithWeights(new Random());
 
             if (n > 0 || !comite.getClassificadores().isEmpty()) {
 
