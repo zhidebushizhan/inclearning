@@ -22,7 +22,7 @@ public class BaseSystem {
     
     //private IncrementalLearner incl;
     protected static int QUANTIDADE_INSTANCIAS = 3;
-    protected static String DIR = "/home/daniel/Documentos/mestrado/mineracao/projeto";
+    protected static String DIR = "/home/daniel/Documentos/mestrado/mineracao/projeto/";
     protected static int MAX_ITERACOES = 10;
 
     //dados para a rede neural, caso a escolha seja MLP com BackPropagation
@@ -47,7 +47,7 @@ public class BaseSystem {
             for (int i = 0; i < qtde; i++) {
 
                 data = new Instances(new BufferedReader(
-                        new FileReader(DIR + "periodo" + (i + 1) + ".arff")));
+                        new FileReader(DIR + "periodo" + (i + 1) + "_12-20090708.arff")));
                 grupoDados.add(data);
                 inl.adicionarInstancias(data);
             }

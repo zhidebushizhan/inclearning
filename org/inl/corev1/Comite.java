@@ -15,7 +15,7 @@ import weka.classifiers.Classifier;
  */
 public class Comite {
 
-   private ArrayList<Classifier> classificadores;
+   private ArrayList<Classifier> classificadores = new ArrayList<Classifier>() ;
 
     /**
      *@param age idade do comite
