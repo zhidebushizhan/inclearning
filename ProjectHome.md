@@ -1,0 +1,1 @@
+An incremental learning system that allows a base neural learning system to incrementally learn new knowledge from only new data without forgetting the existing knowledge.
